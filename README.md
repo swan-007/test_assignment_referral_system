@@ -13,3 +13,7 @@
 2. Подтверждение номера телефона, метод post,  url = домен/api/v1/user/register/confirm, параметры : phone_number, phone_code.
 3. Получить данные пользователя, метод get, url = домен/api/v1/user/details,  параметры : Authorization token.
 4. Ввести чужой инвайт код, метод post, url = домен/api/v1/user/details,  параметры : Authorization token, alien_invite_code.
+
+Для тестирования Api 
+1. Сервис доступен по http://194.58.92.12/
+2. К проекту приложена postman коллекция 
