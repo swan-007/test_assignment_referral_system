@@ -1,4 +1,5 @@
 from django.http import JsonResponse
+
 from .models import User, PhonCode, AlienInviteCode
 from rest_framework.views import APIView
 from .serializers import UserSerializer,AlienInviteCodeSerializer
@@ -88,7 +89,6 @@ class AccountDetails(APIView):
     """
     Класс для работы с данными пользователя
     """
-
     # получить данные
     def get(self, request, *args, **kwargs):
         # проверка аунтификации
