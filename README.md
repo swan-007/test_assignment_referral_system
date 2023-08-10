@@ -3,9 +3,9 @@
 
 
 Установка:
-1. клонировать репозиторий git clone https://github.com/swan-007/test_assignment_referral_system.git
-2. установить зависимости pip install requirements.txt
-3. создать файл .env со следующими полями (SECRET_KEY, DEBUG, ALLOWED_HOST, DB_ENGINE, DB_NAME, DB_HOST, DB_PORT, DB_USER, DB_PASSWORD)
+1. Клонировать репозиторий git clone https://github.com/swan-007/test_assignment_referral_system.git
+2. Установить зависимости pip install -r requirements.txt
+3. Создать файл .env со следующими полями (SECRET_KEY, DEBUG, ALLOWED_HOST, DB_ENGINE, DB_NAME, DB_HOST, DB_PORT, DB_USER, DB_PASSWORD)
 
 Использование:
 
