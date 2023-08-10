@@ -121,7 +121,7 @@ class AccountAlienInviteCode(APIView):
                 {"Status": False, "Error": "Log in required"}, status=403
             )
 
-        # # проверка вводил ли пользователь инвайт код
+        # проверка вводил ли пользователь инвайт код
         serializer = UserSerializer(request.user)
 
         if serializer["alien_invite_code"]["code"].value:
@@ -129,11 +129,13 @@ class AccountAlienInviteCode(APIView):
                 {"Status": False, "Error": "There can be only one code"}
             )
 
+
         # проверка данных
         if {"alien_invite_code"}.issubset(request.data):
             alien_invite_code_user = User.objects.filter(
                 invite_code=request.data["alien_invite_code"]
             ).first()
+
             if alien_invite_code_user:
                 # проверка не принадлежит ли код пользователю
                 if request.user.phone_number == alien_invite_code_user.phone_number:
@@ -162,3 +164,6 @@ class AccountAlienInviteCode(APIView):
                         invite_code.save()
                         return JsonResponse({"Status": True})
                 return JsonResponse({"Status": False, "Errors": "Incorrect data"})
+            return JsonResponse({'Status': False, 'Errors': 'Код не существует', })
+        return JsonResponse({'Status': False, 'Errors': 'Не указаны все необходимые аргументы', })
+
