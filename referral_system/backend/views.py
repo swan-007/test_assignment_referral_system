@@ -108,8 +108,12 @@ class AccountDetails(APIView):
             "subscribers_your_invite_code": subscribers_list,
         }
         return JsonResponse(user_info_dict)
+  
 
-    # Добавление чужого инвайт кода
+class AccountAlienInviteCode(APIView):
+    """
+       Класс для добавления чужого инвайт кода
+       """
     def post(self, request, *args, **kwargs):
         # проверка аунтификации
         if not request.user.is_authenticated:
