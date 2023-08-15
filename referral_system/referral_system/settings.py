@@ -23,10 +23,10 @@ load_dotenv()
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv('SECRET_KEY')
+SECRET_KEY = os.getenv("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv('DEBUG')
+DEBUG = os.getenv("DEBUG")
 
 ALLOWED_HOSTS = []
 
@@ -42,8 +42,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "rest_framework",
     "rest_framework.authtoken",
-    'drf_spectacular',
-
+    "drf_spectacular",
     "backend",
 ]
 
@@ -145,12 +144,12 @@ REST_FRAMEWORK = {
         "rest_framework.authentication.TokenAuthentication"
     ],
     "DEFAULT_FILTER_BACKENDS": ["django_filters.rest_framework.DjangoFilterBackend"],
-    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
 }
 
 SPECTACULAR_SETTINGS = {
-    'TITLE': 'API Сервис для реферальной системы',
-    'DESCRIPTION': '',
-    'VERSION': '1.0.0',
+    "TITLE": "API Сервис для реферальной системы",
+    "DESCRIPTION": "",
+    "VERSION": "1.0.0",
     # OTHER SETTINGS
 }

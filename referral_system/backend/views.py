@@ -1,8 +1,10 @@
 from django.http import JsonResponse
 
+from drf_spectacular.utils import extend_schema
+
 from .models import User, PhonCode, AlienInviteCode
 from rest_framework.views import APIView
-from .serializers import UserSerializer,AlienInviteCodeSerializer
+from .serializers import UserSerializer, AlienInviteCodeSerializer
 import random
 from rest_framework.authtoken.models import Token
 import time
@@ -21,6 +23,7 @@ class RegisterAccount(APIView):
     """
 
     # Регистрация методом POST
+    @extend_schema(summary="Регистрация по номеру телефона", tags=["Register"])
     def post(self, request, *args, **kwargs):
         # проверяем обязательные аргументы
         if {"phone_number"}.issubset(request.data):
@@ -55,6 +58,9 @@ class ConfirmAccount(APIView):
     Класс для подтверждения телефона и входа
     """
 
+    @extend_schema(
+        summary="Подтверждение номера телефона и получение токена", tags=["Register"]
+    )
     def post(self, request, *args, **kwargs):
         # проверяем обязательные аргументы
         if {"phone_code", "phone_number"}.issubset(request.data):
@@ -89,7 +95,9 @@ class AccountDetails(APIView):
     """
     Класс для работы с данными пользователя
     """
+
     # получить данные
+    @extend_schema(summary="Получить данные пользователя", tags=["User"])
     def get(self, request, *args, **kwargs):
         # проверка аунтификации
         if not request.user.is_authenticated:
@@ -108,12 +116,14 @@ class AccountDetails(APIView):
             "subscribers_your_invite_code": subscribers_list,
         }
         return JsonResponse(user_info_dict)
-  
+
 
 class AccountAlienInviteCode(APIView):
     """
-       Класс для добавления чужого инвайт кода
-       """
+    Класс для добавления чужого инвайт кода
+    """
+
+    @extend_schema(summary="Добавить чужой инвайт-код", tags=["User"])
     def post(self, request, *args, **kwargs):
         # проверка аунтификации
         if not request.user.is_authenticated:
@@ -128,7 +138,6 @@ class AccountAlienInviteCode(APIView):
             return JsonResponse(
                 {"Status": False, "Error": "There can be only one code"}
             )
-
 
         # проверка данных
         if {"alien_invite_code"}.issubset(request.data):
@@ -164,6 +173,15 @@ class AccountAlienInviteCode(APIView):
                         invite_code.save()
                         return JsonResponse({"Status": True})
                 return JsonResponse({"Status": False, "Errors": "Incorrect data"})
-            return JsonResponse({'Status': False, 'Errors': 'Код не существует', })
-        return JsonResponse({'Status': False, 'Errors': 'Не указаны все необходимые аргументы', })
-
+            return JsonResponse(
+                {
+                    "Status": False,
+                    "Errors": "Код не существует",
+                }
+            )
+        return JsonResponse(
+            {
+                "Status": False,
+                "Errors": "Не указаны все необходимые аргументы",
+            }
+        )

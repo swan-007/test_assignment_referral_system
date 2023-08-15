@@ -1,8 +1,10 @@
 from django.urls import path
-from backend.views import RegisterAccount, ConfirmAccount, AccountDetails, AccountAlienInviteCode
-
-
-
+from backend.views import (
+    RegisterAccount,
+    ConfirmAccount,
+    AccountDetails,
+    AccountAlienInviteCode,
+)
 
 
 urlpatterns = [
