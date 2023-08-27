@@ -40,7 +40,7 @@ git clone https://github.com/swan-007/test_assignment_referral_system.git
    - Метод POST.  
    - url: ```домен/api/v1/user/alienInvitecode```  
    - Обязательные параметры: ```Authorization token, alien_invite_code```   
-   - Пример запроса:```Headers={Authorization: Token полученный токен}``````Body={"alien_invite_code": }```  
+   - Пример запроса:```Headers={Authorization: Token полученный токен}, Body={"alien_invite_code": }```  
 
 
 Для тестирования Api 
