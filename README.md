@@ -39,8 +39,7 @@
    - Метод Post.  
    - url: ```домен/api/v1/user/alienInvitecode```  
    - Обязательные параметры: ```Authorization token, alien_invite_code```   
-   - Пример запроса:```Headers={Authorization : Token полученный токен}```
-                    ```Body={"alien_invite_code": }```  
+   - Пример запроса:```Headers={Authorization : Token полученный токен}``````Body={"alien_invite_code": }```  
 
 
 Для тестирования Api 
