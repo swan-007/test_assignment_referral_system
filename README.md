@@ -16,30 +16,30 @@
    Пример запроса: Body={"phone_number" :  "89259669277"}  
    Пример ответа: {"Status": true, "Phone_code": 1111, "id": 1}  
 
-2. Подтверждение номера телефона.
-   Метод Post.
-   url = домен/api/v1/user/register/confirm.
-   Обязательные параметры: phone_number, phone_code.
-   Пример запроса: Body={"phone_number" :  "89259669277", "phone_code": "1111"}
+2. Подтверждение номера телефона.  
+   Метод Post.  
+   url = домен/api/v1/user/register/confirm.  
+   Обязательные параметры: phone_number, phone_code.  
+   Пример запроса: Body={"phone_number" :  "89259669277", "phone_code": "1111"}  
    Пример ответа:{"Status" : True, "Token": token}
    
-3. Получить данные пользователя.
-   Метод Get.
-   url = домен/api/v1/user/details.
-   Обязательные параметры: Authorization token.
-   Пример запроса: Headers={Authorization : Token полученный токен}
-   Пример ответа:{phone_number: ,
-                  invite_code: ,
-                  alien_invite_code: {},
-                  subscribers_your_invite_code:[],
+3. Получить данные пользователя.  
+   Метод Get.  
+   url = домен/api/v1/user/details.  
+   Обязательные параметры: Authorization token.  
+   Пример запроса: Headers={Authorization : Token полученный токен}  
+   Пример ответа:{phone_number: ,  
+                  invite_code: ,  
+                  alien_invite_code: {},  
+                  subscribers_your_invite_code:[],  
                  }
       
-4. Ввести чужой инвайт код.
-   Метод Post.
-   url = домен/api/v1/user/alienInvitecode.
-   Обязательные параметры: : Authorization token, alien_invite_code.
-   Пример запроса: Headers={Authorization : Token полученный токен},
-                   Body={"alien_invite_code": }
+4. Ввести чужой инвайт код.  
+   Метод Post.  
+   url = домен/api/v1/user/alienInvitecode.  
+   Обязательные параметры: : Authorization token, alien_invite_code.  
+   Пример запроса: Headers={Authorization : Token полученный токен},  
+                   Body={"alien_invite_code": }  
 
 
 Для тестирования Api 
