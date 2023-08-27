@@ -33,8 +33,7 @@
                         invite_code: ,  
                         alien_invite_code: {},  
                         subscribers_your_invite_code:[],  
-                       }
-      ```
+                       }```
 4. Ввести чужой инвайт код.  
    - Метод Post.  
    - url: ```домен/api/v1/user/alienInvitecode```  
