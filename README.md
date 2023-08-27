@@ -11,32 +11,17 @@
 
 1. Регистрация по номеру телефона. 
    - Метод Post.  
-   - url =
-    ```
-      домен/api/v1/user/register
-     ``` 
-   - Обязательные параметры: phone_number.  
-   - Пример запроса:
-     ```
-     Body={"phone_number" :  "89259669277"}
-     ```
-   - Пример ответа:
-     ```
-     {"Status": true, "Phone_code": 1111, "id": 1}
-     ```  
+   - url =```домен/api/v1/user/register``` 
+   - Обязательные параметры:```phone_number```  
+   - Пример запроса:```Body={"phone_number" :  "89259669277"}```
+   - Пример ответа:```{"Status": true, "Phone_code": 1111, "id": 1}```  
 
 2. Подтверждение номера телефона.  
    - Метод Post.  
    - url = ```домен/api/v1/user/register/confirm ``` 
    - Обязательные параметры: phone_number, phone_code.  
-   - Пример запроса:
-     ```
-     Body={"phone_number" :  "89259669277", "phone_code": "1111"}
-     ```   
-   - Пример ответа:
-     ```
-     {"Status" : True, "Token": token}
-     ```
+   - Пример запроса:```Body={"phone_number" :  "89259669277", "phone_code": "1111"}```   
+   - Пример ответа:```{"Status" : True, "Token": token}```
    
 3. Получить данные пользователя.  
    - Метод Get.  
