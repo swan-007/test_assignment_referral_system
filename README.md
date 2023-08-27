@@ -28,7 +28,8 @@
    - url = домен/api/v1/user/details.  
    - Обязательные параметры: Authorization token.  
    - Пример запроса: Headers={Authorization : Token полученный токен}  
-   - Пример ответа:{phone_number: ,  
+   - Пример ответа:{
+                  phone_number: ,  
                   invite_code: ,  
                   alien_invite_code: {},  
                   subscribers_your_invite_code:[],  
@@ -38,7 +39,8 @@
    - Метод Post.  
    - url = домен/api/v1/user/alienInvitecode.  
    - Обязательные параметры: : Authorization token, alien_invite_code.  
-   - Пример запроса: Headers={Authorization : Token полученный токен},  
+   - Пример запроса:
+                     Headers={Authorization : Token полученный токен},  
                      Body={"alien_invite_code": }  
 
 
