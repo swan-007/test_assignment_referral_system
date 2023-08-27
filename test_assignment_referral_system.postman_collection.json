@@ -5,5 +5,166 @@
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "24337647"
 	},
-	"item": []
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "phone_number",
+							"value": "89259669277",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://194.58.92.12/api/v1/user/register?=",
+					"protocol": "http",
+					"host": [
+						"194",
+						"58",
+						"92",
+						"12"
+					],
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"register"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register/confirm",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "phone_number",
+							"value": "89259669277",
+							"type": "text"
+						},
+						{
+							"key": "phone_code",
+							"value": "1792",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://194.58.92.12/api/v1/user/register/confirm?=&=",
+					"protocol": "http",
+					"host": [
+						"194",
+						"58",
+						"92",
+						"12"
+					],
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"register",
+						"confirm"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": ""
+						},
+						{
+							"key": "",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "details",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token f2d7df4fbbc53033f81df0bd9dc440514637ffe3",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://194.58.92.12/api/v1/user/details",
+					"protocol": "http",
+					"host": [
+						"194",
+						"58",
+						"92",
+						"12"
+					],
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"details"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "alienInvitecode",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 0a9dfddaa0ce7ca7a94fadb26ee66df1fdaada5a",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "alien_invite_code",
+							"value": "9aLMcJ",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://194.58.92.12/api/v1/user/alienInvitecode",
+					"protocol": "http",
+					"host": [
+						"194",
+						"58",
+						"92",
+						"12"
+					],
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"alienInvitecode"
+					]
+				}
+			},
+			"response": []
+		}
+	]
 }
