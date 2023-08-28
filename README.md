@@ -7,11 +7,28 @@
 ```
 git clone https://github.com/swan-007/test_assignment_referral_system.git
 ```
-2. Установить зависимости:
+2. Прейти в каталог referral_system:
+```
+cd referral_system
+```    
+3. Установить зависимости:
  ```
  pip install -r requirements.txt
  ```
-3. Создать файл .env со следующими полями (SECRET_KEY, DEBUG, ALLOWED_HOST, DB_ENGINE, DB_NAME, DB_HOST, DB_PORT, DB_USER, DB_PASSWORD)
+4. Создать файл .env со следующими полями (SECRET_KEY, DEBUG, ALLOWED_HOST, DB_ENGINE, DB_NAME, DB_HOST, DB_PORT, DB_USER, DB_PASSWORD)
+   
+5. Применить миграции:
+ ```
+ python manage.py migrate 
+ ```  
+6. Запуск сервера:
+ ```
+ python manage.py runserver
+ ```
+7. Наслаждаться хорошим API:
+ ```
+ python manage.py enjoy
+ ```
 
 Использование:
 
