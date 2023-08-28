@@ -34,7 +34,9 @@ git clone https://github.com/swan-007/test_assignment_referral_system.git
    - url: ```домен/api/v1/user/details```   
    - Обязательные параметры: ```Authorization token```  
    - Пример запроса: ```Headers={Authorization: Token полученный токен}```   
-   - Пример ответа: ```{phone_number: '89259669277', invite_code: "9aLMcJ", alien_invite_code: {"owner_user": 1, "code": "2UwO9p", "code_user": 4}, subscribers_your_invite_code:["89259669277", "89259669225"],}```
+   - Пример ответа: ```{phone_number: '89259669277', invite_code: "9aLMcJ",
+                        alien_invite_code: {"owner_user": 1, "code": "2UwO9p", "code_user": 4},
+                        subscribers_your_invite_code:["89259669277", "89259669225"],}```
      
 4. Ввести чужой инвайт код.  
    - Метод POST.  
