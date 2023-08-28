@@ -31,16 +31,16 @@ git clone https://github.com/swan-007/test_assignment_referral_system.git
    
 3. Получить данные пользователя.  
    - Метод GET  
-   - url = ```домен/api/v1/user/details```   
+   - url: ```домен/api/v1/user/details```   
    - Обязательные параметры: ```Authorization token```  
    - Пример запроса: ```Headers={Authorization: Token полученный токен}```   
-   - Пример ответа: ```{phone_number: , invite_code: , alien_invite_code: {}, subscribers_your_invite_code:[],}```
+   - Пример ответа: ```{phone_number: '89259669277', invite_code: "9aLMcJ", alien_invite_code: {"owner_user": 1, "code": "2UwO9p", "code_user": 4}, subscribers_your_invite_code:["89259669277", "89259669225"],}```
      
 4. Ввести чужой инвайт код.  
    - Метод POST.  
    - url: ```домен/api/v1/user/alienInvitecode```  
    - Обязательные параметры: ```Authorization token, alien_invite_code```   
-   - Пример запроса:```Headers={Authorization: Token полученный токен}, Body={"alien_invite_code": }```  
+   - Пример запроса:```Headers={Authorization: Token полученный токен}, Body={"alien_invite_code": '2UwO9p' }```  
 
 
 Для тестирования Api 
