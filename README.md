@@ -15,8 +15,10 @@ cd referral_system
  ```
  pip install -r requirements.txt
  ```
-4. Создать файл .env со следующими полями (SECRET_KEY, DEBUG, ALLOWED_HOST, DB_ENGINE, DB_NAME, DB_HOST, DB_PORT, DB_USER, DB_PASSWORD)
-   
+4. Создать файл .env со следующими полями 
+ ```
+ (SECRET_KEY, DEBUG, ALLOWED_HOST, DB_ENGINE, DB_NAME, DB_HOST, DB_PORT, DB_USER, DB_PASSWORD)
+ ```
 5. Применить миграции:
  ```
  python manage.py migrate 
